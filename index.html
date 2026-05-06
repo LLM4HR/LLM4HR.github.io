@@ -1,0 +1,644 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="LLM4HR: The 1st Workshop on Large Language Models for Healthcare and Radiotherapy - IEEE BIBM 2026">
+  <meta name="author" content="">
+  <title>LLM4HR 2026</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome via CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+  <!-- Custom CSS-->
+  <link href="css/general.css" rel="stylesheet">
+
+  <!-- Owl-Carousel -->
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/owl.carousel.css" rel="stylesheet">
+  <link href="css/owl.theme.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+
+  <!-- Magnific Popup core CSS file -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <script src="js/modernizr-2.8.3.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300;
+      color: #333;
+      background-color: #fff;
+    }
+
+    .intro-header {
+      background-image: linear-gradient(rgba(147, 112, 219, 0.85), rgba(103, 65, 180, 0.92)), url("img/dallas.avif");
+      background-position: center;
+      background-size: cover;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      max-height: 220px;
+      position: relative;
+    }
+
+    .abcen1 {
+      position: relative;
+    }
+
+    .h1_home {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      color: #fff;
+      font-size: 1.8em;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .h3_home {
+      font-weight: 300;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #d0e0ff;
+      font-size: 1em;
+      margin-top: 8px;
+    }
+
+    .section-heading {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #3a5199;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .section-heading:after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: #5c85d6;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .content-section-a, .content-section-b {
+      padding: 70px 0;
+    }
+
+    .content-section-a {
+      background-color: #ffffff;
+    }
+
+    .content-section-b {
+      background-color: #f8f9fa;
+    }
+
+    .lead {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .navbar-default {
+      background-color: #fff;
+      border-color: transparent;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar-default .navbar-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #3a5199;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+      color: #555;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    table {
+      border-collapse: collapse;
+      line-height: 2;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    th {
+      background-color: #3a5199;
+      color: white;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #e9ecef;
+    }
+
+    ul {
+      padding-left: 0;
+      margin-left: 0;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 25px;
+      font-size: 16px;
+    }
+
+    li:before {
+      content: "•";
+      color: #3a5199;
+      font-size: 20px;
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+
+    /* Remove bullets from navbar */
+    .navbar-nav li,
+    .nav li {
+      padding: 0;
+      padding-left: 0;
+    }
+
+    .navbar-nav li:before,
+    .nav li:before {
+      content: none !important;
+    }
+
+/* .organizer-card {
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  text-align: center;
+} */
+#committee .organizer-card {
+  min-height: 280px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#committee .col-sm-6 {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+    .organizer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .organizer-card center {
+      display: block;
+      width: 100%;
+    }
+
+    .img-circle {
+      border: 4px solid #f8f9fa;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      transition: transform 0.5s ease;
+      object-fit: cover;
+    }
+
+    .img-circle:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #3a5199;
+      color: white;
+      padding: 25px 0;
+    }
+
+    footer h5 {
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    .schedule {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .submission-link {
+      display: inline-block;
+      background-color: #3a5199;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(58, 81, 153, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .submission-link:hover {
+      background-color: #5c85d6;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(58, 81, 153, 0.4);
+      text-decoration: none;
+      color: white;
+    }
+
+    .submission-link i {
+      margin-right: 8px;
+    }
+
+    .tbd-badge {
+      display: inline-block;
+      background-color: #e9ecef;
+      color: #666;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .highlight-row td:first-child {
+      font-weight: 600;
+      color: #3a5199;
+    }
+  </style>
+</head>
+
+<body id="home">
+
+<!-- Preloader -->
+<div id="preloader">
+  <div id="status"></div>
+</div>
+
+<!-- Header -->
+<div class="intro-header">
+  <div class="col-xs-12 text-center abcen1">
+    <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">
+      LLM4HR: The 1st Workshop on<br />
+      Large Language Models for<br />
+      Healthcare and Radiotherapy<br />
+      Dallas, TX
+    </h1>
+    <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">
+      December 1–4, 2026 &nbsp;|&nbsp; held in conjunction with IEEE BIBM 2026
+    </h3>
+  </div>
+</div>
+
+<!-- NavBar -->
+<nav class="navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" target="_blank">IEEE BIBM 2026 Workshop</a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li class="menuItem"><a href="#about">Overview</a></li>
+        <li class="menuItem"><a href="#topics">Research Topics</a></li>
+        <li class="menuItem"><a href="#schedule">Important Dates</a></li>
+        <li class="menuItem"><a href="#organizers">Organizers</a></li>
+        <li class="menuItem"><a href="#committee">Committee</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Overview -->
+<div id="about" class="content-section-a" style="border-top: 0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 wow fadeInLeftBig" data-animation-delay="200">
+        <h3 class="section-heading">Workshop Overview</h3>
+        <p class="lead">The 1st Large Language Models for Healthcare and Radiotherapy (LLM4HR) workshop at IEEE BIBM 2026 is dedicated to addressing the rapidly growing intersection of artificial intelligence and healthcare &amp; radiation oncology. The increasing complexity of clinical data — ranging from electronic health records and patient-reported outcomes to medical imaging and treatment planning datasets — presents both significant challenges and transformative opportunities.</p>
+        <p class="lead">Recognizing the critical need for robust, intelligent systems to manage noise, missing data, high-dimensional information, and multi-modalities, this workshop aims to bridge the gap between cutting-edge methodological development and safe, effective clinical implementation. Its primary purpose is to convene researchers, clinicians, and AI practitioners to explore how machine learning, deep learning, data science, LLMs, multimodal AI, and agentic AI can revolutionize key aspects of healthcare and radiation oncology — including data preprocessing, outcome prediction, treatment planning, workflow optimization, and quality assurance.</p>
+        <p class="lead">By focusing on practical solutions such as clinical note summarization, 3D dose prediction, anomaly detection, novel visualization techniques, and response-guided treatment planning and optimization, this workshop seeks to foster interdisciplinary collaboration, accelerate translational research, and ultimately improve cancer patient care through intelligent, automated, and context-aware radiation therapy systems.</p>
+        <p class="lead">The workshop is held in conjunction with the IEEE International Conference on Bioinformatics and Biomedicine 2026 (BIBM, CCF rank B). Accepted papers will be included in the corresponding proceedings.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Topics -->
+<div id="topics" class="content-section-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 wow fadeInLeftBig" data-animation-delay="200">
+        <h3 class="section-heading">Topics of Interest</h3>
+        <p class="lead">Topics of interest include but are not limited to:</p>
+        <div class="row">
+          <div class="col-md-6">
+            <ul>
+              <li>Data preprocessing and cleansing solutions for noise and missing data in large-scale health datasets</li>
+              <li>Classification, regression, and clustering in EHRs, patient-reported outcomes, and clinical data</li>
+              <li>Machine learning and deep learning for clinical data analysis and integration in translational research</li>
+              <li>Topic modeling and anomaly detection in large amounts of clinical textual data</li>
+              <li>Novel visualization techniques for querying and analyzing clinical data</li>
+              <li>Statistics and probability in large-scale clinical data mining</li>
+              <li>Deep learning and machine learning for 3D dose prediction in radiation therapy</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li>Deep learning and machine learning for medical imaging processing in radiation therapy</li>
+              <li>Large language models and knowledge graphs for EHR analysis and clinical notes summarization</li>
+              <li>LLMs and foundation models for cancer radiotherapy outcome prediction and response-guided adaptive radiotherapy</li>
+              <li>Multimodal AI for treatment planning and optimization in radiation therapy</li>
+              <li>Agentic AI for optimizing radiation oncology workflows</li>
+              <li>LLMs, multimodal AI, and agentic AI for new quality assurance approach development and deployment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Important Dates -->
+<div id="schedule" class="content-section-a">
+  <div class="container">
+    <h3 class="section-heading">Important Dates</h3>
+
+    <table id="timeTable">
+      <tr>
+        <th style="width:35%;">Date</th>
+        <th style="width:auto;">Event</th>
+      </tr>
+      <tr class="highlight-row">
+        <td>September 18, 2026</td>
+        <td>Due date for full workshop papers submission</td>
+      </tr>
+      <tr>
+        <td>October 18, 2026</td>
+        <td>Notification of paper acceptance to authors</td>
+      </tr>
+      <tr>
+        <td>November 8, 2026</td>
+        <td>Camera-ready of accepted papers</td>
+      </tr>
+      <tr>
+        <td>December 1–4, 2026</td>
+        <td>Workshop dates — Dallas, TX (Hybrid: Onsite + Online)</td>
+      </tr>
+    </table>
+
+    <div class="text-center">
+      <a href="https://wi-lab.com/cyberchair/2026/bibm26/scripts/ws_submit.php" target="_blank" class="submission-link">
+        <i class="fa fa-paper-plane"></i> Paper Submission System </span>
+      </a>
+    </div>
+
+    <div class="schedule" style="margin-top: 40px;">
+      <h3>Workshop Format</h3>
+      <p>This is a hybrid half-day workshop. The detailed presentation schedule will be announced after paper acceptance notifications. The program will include paper presentations, invited talks, and interactive discussions focused on Large Language Models for Healthcare and Radiotherapy.</p>
+      <p>Please submit a full-length paper (up to 8 page IEEE 2-column format) through the online submission system (you can download the format instruction here: <a href="http://www.ieee.org/conferences_events/conferences/publishing/templates.html" target="_blank">http://www.ieee.org/conferences_events/conferences/publishing/templates.html</a>). The paper submission is double blind. Please don’t include any authors and/or affiliations in the paper.</p>
+      <p>Electronic submissions (in PDF or Postscript format) are required. Selected participants will be asked to submit their revised papers in a format to be specified at the time of acceptance.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Organizers -->
+<div id="organizers" class="content-section-b" style="border-top: 0">
+  <div class="container">
+    <h3 class="section-heading">Program Chairs</h3>
+    <div class="row" style="display: flex; flex-wrap: wrap; align-items: stretch;">
+
+      <div class="col-sm-6 col-md-3">
+        <div class="organizer-card wow fadeInUp" data-animation-delay="100">
+          <h4 class="text-center" style="color: #3a5199;">Zhong Chen</h4>
+          <center>
+            <a href="https://pursuerchen.github.io/" target="_blank" style="text-decoration: none;">
+              <img class="img-responsive img-circle" height="130px" width="130px" src="img/organizer/Zhong_Chen.png" alt="Zhong Chen" onerror="this.src='https://ui-avatars.com/api/?name=Zhong+Chen&background=3a5199&color=fff&size=130'">
+              <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">Southern Illinois University Carbondale</h5>
+            </a>
+            <p class="text-center" style="font-size:13px; color:#888;">Program Chair</p>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+        <div class="organizer-card wow fadeInUp" data-animation-delay="200">
+          <h4 class="text-center" style="color: #3a5199;">Hao Gao</h4>
+          <center>
+              <a href="https://profiles.utsouthwestern.edu/profile/228592/hao-gao.html" target="_blank" style="text-decoration: none;">
+                <img class="img-responsive img-circle" height="130px" width="130px" src="img/organizer/Hao_Gao.jpg" alt="Hao Gao" onerror="this.src='https://ui-avatars.com/api/?name=Hao+Gao&background=3a5199&color=fff&size=130'">
+                <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">UT Southwestern Medical Center</h5>
+              </a>
+            <p class="text-center" style="font-size:13px; color:#888;">Program Co-Chair</p>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+        <div class="organizer-card wow fadeInUp" data-animation-delay="300">
+          <h4 class="text-center" style="color: #3a5199;">Chen Zhao</h4>
+          <center>
+                <a href="https://charliezhaoyinpeng.github.io/homepage/" target="_blank" style="text-decoration: none;">
+                  <img class="img-responsive img-circle" height="130px" width="130px" src="img/organizer/Chen_Zhao.png" alt="Chen Zhao" onerror="this.src='https://ui-avatars.com/api/?name=Chen+Zhao&background=3a5199&color=fff&size=130'">
+                  <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">Baylor University</h5>
+                </a>
+            <p class="text-center" style="font-size:13px; color:#888;">Program Co-Chair</p>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3">
+        <div class="organizer-card wow fadeInUp" data-animation-delay="400">
+          <h4 class="text-center" style="color: #3a5199;">Yi He</h4>
+          <center>
+              <a href="https://yhe15.people.wm.edu/" target="_blank" style="text-decoration: none;">
+                <img class="img-responsive img-circle" height="130px" width="130px" src="img/organizer/Yi_He.jpg" alt="Yi He" onerror="this.src='https://ui-avatars.com/api/?name=Yi+He&background=3a5199&color=fff&size=130'">
+                <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">William &amp; Mary</h5>
+              </a>
+            <p class="text-center" style="font-size:13px; color:#888;">Program Co-Chair</p>
+          </center>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Keynote Speakers
+    <h3 class="section-heading" style="margin-top: 50px;">Keynote Speakers</h3>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="organizer-card">
+          <p class="lead" style="margin-bottom: 0; text-align: center; color: #888;">
+            <i class="fa fa-microphone" style="font-size: 2em; display: block; margin-bottom: 10px; color: #ccc;"></i>
+            Keynote speakers to be announced.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Program Committee -->
+<div id="committee" class="content-section-a">
+  <div class="container">
+    <h3 class="section-heading">Program Committee</h3>
+    <div class="row">
+
+      <div class="col-sm-6 col-md-4">
+        <div class="organizer-card" data-animation-delay="100">
+          <h4 class="text-center" style="color: #3a5199;">Zhong Chen</h4>
+          <center>
+            <a href="https://pursuerchen.github.io/" target="_blank" style="text-decoration: none;">
+              <img class="img-responsive img-circle" height="120px" width="120px" src="img/organizer/Zhong_Chen.png" alt="Zhong Chen" onerror="this.src='https://ui-avatars.com/api/?name=Zhong+Chen&background=3a5199&color=fff&size=130'">
+              <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">Southern Illinois University Carbondale</h5>
+            </a>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="organizer-card" data-animation-delay="200">
+          <h4 class="text-center" style="color: #3a5199;">Hao Gao</h4>
+          <center>
+            <a href="https://profiles.utsouthwestern.edu/profile/228592/hao-gao.html" target="_blank" style="text-decoration: none;">
+              <img class="img-responsive img-circle" height="130px" width="130px" src="img/organizer/Hao_Gao.jpg" alt="Hao Gao" onerror="this.src='https://ui-avatars.com/api/?name=Hao+Gao&background=3a5199&color=fff&size=130'">
+              <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">UT Southwestern Medical Center</h5>
+            </a>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="organizer-card" data-animation-delay="300">
+          <h4 class="text-center" style="color: #3a5199;">Chen Zhao</h4>
+          <center>
+            <a href="https://charliezhaoyinpeng.github.io/homepage/" target="_blank" style="text-decoration: none;">
+              <img class="img-responsive img-circle" height="130px" width="130px" src="img/organizer/Chen_Zhao.png" alt="Chen Zhao" onerror="this.src='https://ui-avatars.com/api/?name=Chen+Zhao&background=3a5199&color=fff&size=130'">
+              <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">Baylor University</h5>
+              </a>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="organizer-card" data-animation-delay="400">
+          <h4 class="text-center" style="color: #3a5199;">Yi He</h4>
+          <center>
+            <a href="https://yhe15.people.wm.edu/" target="_blank" style="text-decoration: none;">
+              <img class="img-responsive img-circle" height="130px" width="130px" src="img/organizer/Yi_He.jpg" alt="Yi He" onerror="this.src='https://ui-avatars.com/api/?name=Yi+He&background=3a5199&color=fff&size=130'">
+              <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">William &amp; Mary</h5>
+            </a>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="organizer-card" data-animation-delay="500">
+          <h4 class="text-center" style="color: #3a5199;">Jiaxin Li</h4>
+          <center>
+            <a href="https://scholar.google.com/citations?user=CfdHPAgAAAAJ&hl=zh-CN" target="_blank" style="text-decoration: none;">
+              <img class="img-responsive img-circle" height="130px" width="130px" src="img/organizer/Jiaxin_Li.jpg" alt="Jiaxin Li" onerror="this.src='https://ui-avatars.com/api/?name=Jiaxin+Li&background=3a5199&color=fff&size=130'">
+              <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">UT Southwestern Medical Center</h5>
+            </a>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="organizer-card" data-animation-delay="600">
+          <h4 class="text-center" style="color: #3a5199;">Dong Li</h4>
+          <center>
+          <a href="https://turkeywatanabe.github.io/dongli/" target="_blank" style="text-decoration: none;">
+            <img class="img-responsive img-circle" height="130px" width="130px" src="img/organizer/Dong_Li.jpg" alt="Dong Li" onerror="this.src='https://ui-avatars.com/api/?name=Dong+Li&background=3a5199&color=fff&size=130'">
+            <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">Baylor University</h5>
+          </a>
+          </center>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="organizer-card" data-animation-delay="700">
+          <h4 class="text-center" style="color: #3a5199;">Yang Yan</h4>
+          <center>
+            <a href="https://scholar.google.com/citations?user=pBX1HmoAAAAJ&hl=en" target="_blank" style="text-decoration: none;">
+              <img class="img-responsive img-circle" height="130px" width="130px" src="img/organizer/Yang_Yan.jpg" alt="Yang Yan" onerror="this.src='https://ui-avatars.com/api/?name=Yang+Yan&background=3a5199&color=fff&size=130'">
+              <h5 class="text-center" style="margin-top: 10px; color: #3a5199;">Southern Illinois University Carbondale</h5>
+            </a>
+          </center>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center" id="contact">
+        <h5>© LLM4HR: The 1st Workshop on Large Language Models for Healthcare and Radiotherapy &nbsp;|&nbsp; IEEE BIBM 2026 &nbsp;|&nbsp; Dallas, TX</h5>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/script.js"></script>
+<!-- StickyMenu -->
+<script src="js/stickUp.min.js"></script>
+<script type="text/javascript">
+  jQuery(function($) {
+    $(document).ready(function() {
+      $('.navbar-default').stickUp();
+    });
+  });
+</script>
+<!-- Smoothscroll -->
+<script type="text/javascript" src="js/jquery.corner.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+<script src="js/classie.js"></script>
+<!-- Magnific Popup core JS file -->
+<script src="js/jquery.magnific-popup.js"></script>
+</body>
+</html>
